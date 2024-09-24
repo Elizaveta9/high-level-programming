@@ -1,5 +1,7 @@
+package com.katkova.app;
+
 import java.util.Scanner;
-class HelloUser {
+class App {
 	public static void main(String[] args){
 		String name = getUserName();
 		printHello(name);
