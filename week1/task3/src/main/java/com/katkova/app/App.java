@@ -1,5 +1,8 @@
+package com.katkova.app;
+
 import java.util.Scanner;
-class Dodecahedron {
+
+class App {
 	public static void main(String[] args){
 		int a = getA();
 		printV(a);
