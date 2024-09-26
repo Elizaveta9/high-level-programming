@@ -16,7 +16,7 @@ class App {
 	}
 	// Рассчиать объем додекаэдра
 	public static void printV(int a) {
-		double V = (15 + 7 * Math.sqrt(5) / 4 * Math.pow(a, 3));
+		double V = ((15 + 7 * Math.sqrt(5)) / 4) * Math.pow(a, 3);
 		System.out.println("Объем = " + V);
 	}
 }
