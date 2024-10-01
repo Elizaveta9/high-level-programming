@@ -1,24 +1,19 @@
 package edu.katkova;
 
 public class Cat {
+    // Атрибуты
     private String name;
     private String color;
     private double weightKg;
     private int age;
 
-    /*
-    Значения по умолчанию:
-        name = "invisible";
-        color = "John";
-        weightKg = 0.0;
-        age = 0;
-     */
+    // Переопределенный конструктор по умолчанию
     public Cat() {
         this.color = "invisible";
         this.name = "John";
     }
 
-
+    // Конструктор с параметрами
     public Cat(String name, String color, double weightKg, int age) {
         this.name = name;
         this.color = color;
@@ -34,6 +29,7 @@ public class Cat {
         }
     }
 
+    // геттеры и сеттеры
     public String getName() {
         return name;
     }
