@@ -26,4 +26,16 @@ class BankAccountTest {
         bankAccount.withdraw(99);
         assertEquals(1, bankAccount.getBalance());
     }
+    @Test
+    void depositNegative() {
+        BankAccount bankAccount = new BankAccount("", 100);
+        bankAccount.deposit(-99);
+        assertEquals(100, bankAccount.getBalance());
+    }
+    @Test
+    void withdrawNegative() {
+        BankAccount bankAccount = new BankAccount("", 100);
+        bankAccount.withdraw(-99);
+        assertEquals(100, bankAccount.getBalance());
+    }
 }

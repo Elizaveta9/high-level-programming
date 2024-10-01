@@ -2,21 +2,27 @@ package edu.penzgtu.katkova;
 
 public class Main {
     public static void main(String[] args) {
+        // Определение машины
         Car car = new Car("LADA Vesta", new Engine(70));
+        System.out.println(car);
+
+        // Определение пассажиров
         Passenger passengerGavrilov = new Passenger("Гаврилов М.Д.");
         Passenger passengerKnyazev = new Passenger("Князев Я.М.");
-        System.out.println(car);
+
+        // Два пассажира зашли в машину
         car.addPassenger(passengerGavrilov);
-        System.out.println(car);
         car.addPassenger(passengerKnyazev);
         System.out.println(car);
-        car.removePassenger(passengerGavrilov);
-        System.out.println(car);
+
+        // Для третьего нет места
         car.addPassenger(new Passenger("Осипов М.Г."));
-        System.out.println(car);
+
+        // Попытка убрать из машины несуществующего пассажира
         car.removePassenger(new Passenger("Савин Р.Д."));
-        System.out.println(car);
-        car.removePassenger(passengerKnyazev);
+
+        // Убрать существующего пассажира
+        car.removePassenger(passengerGavrilov);
         System.out.println(car);
     }
 }

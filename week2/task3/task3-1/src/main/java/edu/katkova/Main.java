@@ -2,9 +2,17 @@ package edu.katkova;
 
 public class Main {
     public static void main(String[] args) {
-        Book book1 = new Book(new Author("А.С. Пушкин", 1799), "Евгений Онегин");
-        Book book2 = new Book(new Author("Рей Брэдбери", 1920), "Вино из одуванчиков");
-        System.out.println(book1);
-        System.out.println(book2);
+        // Определение автора (Пушкин)
+        Author pushkin = new Author("А.С. Пушкин", 1799);
+
+        // Определение книг Пушкина
+        Book bookEvgeniyOnegin = new Book(pushkin, "Евгений Онегин");
+        System.out.println(bookEvgeniyOnegin);
+        Book bookDubrovskiy = new Book(pushkin, "Дубровский");
+        System.out.println(bookDubrovskiy);
+
+        // Определение книги "Вино из одуванчиков"
+        Book bookDandelionWine = new Book(new Author("Рей Брэдбери", 1920), "Вино из одуванчиков");
+        System.out.println(bookDandelionWine);
     }
 }

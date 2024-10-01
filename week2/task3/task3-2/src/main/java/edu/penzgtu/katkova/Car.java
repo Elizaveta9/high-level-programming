@@ -11,6 +11,7 @@ public class Car {
         this.engine = engine;
     }
 
+    // Если есть свободное место в машине, то добавит пассажира
     public void addPassenger(Passenger passenger) {
         Passenger newPassenger = null;
         if (passenger1 == null) {
@@ -20,7 +21,7 @@ public class Car {
             passenger2 = passenger;
             newPassenger = passenger2;
         }
-        System.out.printf(newPassenger != null ? "%s зашел\n" : "Не удалось посадить %s\n", passenger.getName());
+        System.out.printf(newPassenger != null ? "%s зашел\n" : "Нет места для %s\n", passenger.getName());
     }
 
     public void removePassenger(Passenger passenger) {

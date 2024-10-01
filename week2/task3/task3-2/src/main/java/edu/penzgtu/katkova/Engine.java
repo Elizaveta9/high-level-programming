@@ -2,8 +2,11 @@ package edu.penzgtu.katkova;
 
 public class Engine {
     private int power;
+
     public Engine(int power) {
-        this.power = power;
+        if (power >= 0) {
+            this.power = power;
+        }
     }
 
     public int getPower() {
@@ -11,6 +14,8 @@ public class Engine {
     }
 
     public void setPower(int power) {
-        this.power = power;
+        if (power >= 0) {
+            this.power = power;
+        }
     }
 }
