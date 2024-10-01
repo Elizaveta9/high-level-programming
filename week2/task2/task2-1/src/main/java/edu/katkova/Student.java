@@ -20,6 +20,7 @@ public class Student {
         this.averageScore = averageScore;
     }
 
+    // Используется статический метод between() класса Period для нахождения разницы между датами
     public int getAge() {
         return Period.between(birthDate.toLocalDate(), LocalDate.now()).getYears();
     }
@@ -33,14 +34,15 @@ public class Student {
                          - возраст: %d
                          - группа: %s
                          - средний балл: %.1f
-                         - isExcellentStudent: %b""",
+                         - хороший студент: %s""",
                 studentId,
                 name,
                 DateTimeFormatter.ofPattern("dd.MM.yy (HH:mm)").format(birthDate),
                 getAge(),
                 group,
                 averageScore,
-                isExcellentStudent());
+                // Тернарный оператор. Если isExcellentStudent() возвращает true ставится "да". При false - "нет"
+                isExcellentStudent() ? "да" : "нет");
     }
 
     public boolean isExcellentStudent() {
