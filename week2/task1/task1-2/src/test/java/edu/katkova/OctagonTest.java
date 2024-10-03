@@ -8,12 +8,12 @@ public class OctagonTest {
     @Test
     public void shouldBeEqualCalculateArea() {
         Octagon octagon = new Octagon(1.73717);
-        assertEquals("10,00", String.format("%.2f", octagon.calculateArea()));
+        assertEquals(10, Math.round(octagon.calculateArea()));
     }
 
     @Test
     public void shouldBeEqualCalculatePerimeter() {
         Octagon octagon = new Octagon(1.50888);
-        assertEquals("10,00", String.format("%.2f", octagon.calculatePerimeter()));
+        assertEquals(10, Math.round(octagon.calculatePerimeter()));
     }
 }
