@@ -6,7 +6,7 @@ public class Main {
         System.out.printf("Восьмиугольник: \n" +
                         "- радиус вписанной окружности = %.2f см\n" +
                         "- площадь = %.2f см^2\n" +
-                        "- периметр = %.2f см",
+                        "- периметр = %.2f см\n",
                 octagon.getInnerRadius(), octagon.calculateArea(), octagon.calculatePerimeter());
     }
 }
